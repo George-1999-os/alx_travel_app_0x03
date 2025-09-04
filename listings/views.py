@@ -1,5 +1,4 @@
-# listings/views.py
-from rest_framework import viewsets
+from django.http import JsonResponse
 
-class DummyViewSet(viewsets.ViewSet):
-    pass
+def index(request):
+    return JsonResponse({'status': 'ok'})
