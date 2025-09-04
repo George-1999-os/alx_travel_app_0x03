@@ -39,13 +39,12 @@ ALLOWED_HOSTS = []
 # alx_travel_app/settings.py
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'listings',
+    INSTALLED_APPS = ['listings']
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+DEFAULT_FROM_EMAIL = 'your-email@gmail.com'
+CELERY_BROKER_URL = 'amqp://localhost'
+
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
